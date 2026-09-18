@@ -17,7 +17,6 @@ spec:
     spec:
       containers:
         - name: springapp-home
-          # Replace engrsharvan1 with your Docker Hub username
           image: engrsharvan1/springapp-home:latest
           imagePullPolicy: Always
           ports:
@@ -45,14 +44,12 @@ spec:
               cpu: "500m"
               memory: "512Mi"
           readinessProbe:
-            httpGet:
-              path: /actuator/health
+            tcpSocket:
               port: 8080
-            initialDelaySeconds: 15
+            initialDelaySeconds: 20
             periodSeconds: 10
           livenessProbe:
-            httpGet:
-              path: /actuator/health
+            tcpSocket:
               port: 8080
-            initialDelaySeconds: 30
+            initialDelaySeconds: 40
             periodSeconds: 20
