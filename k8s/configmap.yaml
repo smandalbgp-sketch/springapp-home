@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: springapp-home-config
+  namespace: springapp-home
+data:
+  # Add any application.properties style env vars your Spring Boot app needs.
+  # These are injected as environment variables via envFrom in deployment.yaml
+  SERVER_PORT: "8080"
+  # Example (uncomment/edit for your DB):
+  # SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres:5432/springapp"
+  # SPRING_DATASOURCE_USERNAME: "postgres"

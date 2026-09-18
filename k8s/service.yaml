@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: springapp-home
+  namespace: springapp-home
+  labels:
+    app: springapp-home
+spec:
+  type: ClusterIP
+  selector:
+    app: springapp-home
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
