@@ -6,7 +6,6 @@ metadata:
   labels:
     app: springapp-home
 spec:
-  type: ClusterIP
   selector:
     app: springapp-home
   ports:
