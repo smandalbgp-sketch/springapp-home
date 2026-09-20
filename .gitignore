@@ -3,3 +3,4 @@ target/
 .project
 .settings/
 target/
+src/main/resources/application-local.properties
