@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: springapp-home
-          image: engrsharvan1/springapp-home:latest
+          image: engrsharvan1/springapp-home:b72633d62d32e36b656390e264a875a926eb2123
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
